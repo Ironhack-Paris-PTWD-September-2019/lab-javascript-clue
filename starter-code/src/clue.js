@@ -34,7 +34,7 @@ const missScarlet = {
     last_name: "Scarlet",
     color: "red",
     description: "She is an A-list movie star with a dark past",
-    age: 31
+    age: 31,
     image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
     occupation: "Actor",
 }
@@ -43,7 +43,7 @@ const mrsPeacock = {
     first_name: "Eleanor",
     last_name: "Peacock",
     color: "blue",
-    description "She is from a wealthy family and uses her status and money to earn popularity",
+    description: "She is from a wealthy family and uses her status and money to earn popularity",
     age: 36,
     image: "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
     occupation: "Socialité",
@@ -159,7 +159,7 @@ const theater = {
 }
 
 const guestHouse = {
-    name: "Guest House,
+    name: "Guest House",
 }
 
 const patio = {
@@ -174,3 +174,11 @@ const roomsArray = [diningRoom, conservatory, kitchen, study, library, billiardR
 
 // Weapons Collection
 const weaponsArray = [rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, pistol];
+
+function randomSelector(arr) {
+    if (arr.length === 0) {
+        return undefined;
+    }
+    let index = Math.floor(Math.random()*arr.length);
+    return arr[index];
+}
