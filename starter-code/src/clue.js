@@ -201,3 +201,11 @@ function pickMystery() {
     
     return mystery; 
 }
+
+function revealMystery() {
+    revelation = pickMystery();
+    console.log(`${revelation.mcharacter.first_name} ${revelation.mcharacter.last_name} killed Mr Body using the ${revelation.mweapon.name} in the ${revelation.mroom.name}`)
+    return ; 
+}
+
+revealMystery(); 
