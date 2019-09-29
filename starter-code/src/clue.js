@@ -107,7 +107,7 @@ weaponsArray.push(rope, knife, candlestick, dumbbell, poison, axe, bat, trophy, 
 
 
 // Iteration 2
-const mysteryEnvelope = {};
+
 
 function randomSelector (stacksArray) {
     let randomPosition = Math.floor(Math.random() * stacksArray.length);
@@ -119,6 +119,12 @@ function pickMystery () {
     let mysteryWeapon = randomSelector(weaponsArray);
     let mysteryRoom = randomSelector(roomsArray);
 
-    mysteryEnvelope = {mysteryCharacter, mysteryWeapon, mysteryRoom};
+    const mysteryEnvelope = { suspect: mysteryCharacter, weapon: mysteryWeapon, room: mysteryRoom};
     return mysteryEnvelope;
 }
+
+function revealMystery (mysteryEnvelope) {
+    return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`;
+}
+
+revealMystery(pickMystery());
